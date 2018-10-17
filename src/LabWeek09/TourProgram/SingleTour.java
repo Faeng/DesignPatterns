@@ -3,13 +3,13 @@ package LabWeek09.TourProgram;
 public class SingleTour implements Tour {
     private String name;
     private double price;
-    private int availableSeat;
+    private int allSeat;
     private int reservedSeat;
 
-    public SingleTour(String name, double price, int availableSeat , int reservedSeat){
+    public SingleTour(String name, double price, int allSeats, int reservedSeat){
         this.name = name;
         this.price = price;
-        this.availableSeat = availableSeat;
+        this.allSeat = allSeats;
         this.reservedSeat = reservedSeat;
     }
 
@@ -25,6 +25,6 @@ public class SingleTour implements Tour {
 
     @Override
     public int getAvailableSeat() {
-        return availableSeat;
+        return allSeat-reservedSeat;
     }
 }

@@ -3,9 +3,15 @@ package LabWeek09.TourProgram;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class PackageTour implements Tour{
     private String packageName;
     private List<Tour> tours = new ArrayList<Tour>();
+
+    public PackageTour(String packageName, List<Tour> tours){
+        this.packageName = packageName;
+        this.tours = tours;
+    }
 
     @Override
     public String getName() {
@@ -21,8 +27,29 @@ public class PackageTour implements Tour{
         return total*0.9;
     }
 
+    static int max = 0;
+    private void getMax(){
+        for (Tour t: tours) {
+            if(t.getAvailableSeat()>=max){
+                max = t.getAvailableSeat();
+            }
+        }
+    }
+
     @Override
     public int getAvailableSeat() {
-        return 0;
+        getMax();
+        int minSeat = max;
+        for (Tour t: tours) {
+            if(minSeat>=t.getAvailableSeat()){
+                minSeat = t.getAvailableSeat();
+            }
+        }
+        max = 0;
+        return minSeat;
     }
+
+
+
+
 }
