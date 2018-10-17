@@ -1,7 +1,7 @@
-package LabWeek09.TourProgram;
+package LabWeek09.Tour;
 
 public interface Tour {
     String getName();
-    Double getPrice();
+    double getPrice();
     int getAvailableSeat();
 }

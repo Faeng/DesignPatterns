@@ -1,4 +1,4 @@
-package LabWeek09.TourProgram;
+package LabWeek09.Tour;
 
 public class SingleTour implements Tour {
     private String name;
@@ -19,7 +19,7 @@ public class SingleTour implements Tour {
     }
 
     @Override
-    public Double getPrice() {
+    public double getPrice() {
         return price;
     }
 

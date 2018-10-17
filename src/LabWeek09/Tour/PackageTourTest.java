@@ -1,4 +1,4 @@
-package LabWeek09.TourProgram;
+package LabWeek09.Tour;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -30,7 +30,7 @@ class PackageTourTest {
 
    @Test
    public void testingPackageTourPrice(){
-        assertEquals(Double.valueOf(2430),bangkokPackageTour.getPrice());
+        assertEquals(2430,bangkokPackageTour.getPrice());
    }
 
    @Test

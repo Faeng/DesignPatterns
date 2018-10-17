@@ -1,4 +1,4 @@
-package LabWeek09.TourProgram;
+package LabWeek09.Tour;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class PackageTour implements Tour{
     }
 
     @Override
-    public Double getPrice() {
+    public double getPrice() {
        double total = 0;
         for (Tour t: tours) {
            total+= t.getPrice();
