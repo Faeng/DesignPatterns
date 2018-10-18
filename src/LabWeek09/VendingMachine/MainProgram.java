@@ -8,6 +8,11 @@ public class MainProgram {
         vendingMachine.insertCash(500);
         vendingMachine.exchangeCash();
         vendingMachine.printTicket();
-        
+
+        vendingMachine.chooseTheStation(-2); //going back to Mochit Station.
+        vendingMachine.insertCash(40);
+        vendingMachine.exchangeCash();
+        vendingMachine.printTicket();
+
     }
 }

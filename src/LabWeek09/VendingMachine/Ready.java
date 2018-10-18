@@ -14,21 +14,31 @@ public class Ready implements VendingState {
     public Ready(VendingMachine newVendingMachine,int currentStation){
         vendingMachine = newVendingMachine;
         this.currentStation = currentStation;
-        stations.add("Mochit station");
-        stations.add("LadPrao station");
-        stations.add("Ratchada station");
-        stations.add("HuiKwang station");
-        stations.add("Rama9 station");
-        stations.add("Sukumvit station");
-        stations.add("Klongtoei station");
+        stations.add("Mochit");
+        stations.add("LadPrao");
+        stations.add("Ratchada");
+        stations.add("HuiKwang");
+        stations.add("Rama9");
+        stations.add("Sukumvit");
+        stations.add("Klongtoei");
     }
 
     @Override
     public void chooseTheStation(int station) {
+        System.out.print("The Line of train (16 Baht/station) --> ");
+        for (String t:stations) {
+            System.out.print(t+" ");
+        }
+        System.out.println();
         System.out.println("Now you are at "+stations.get(currentStation));
-        if(station+currentStation>6){
-            station = currentStation - mod(station,6);
+
+        if((station+currentStation)>6){
+            station = mod(6-currentStation,6);
             currentStation = 6;
+        }
+        else if(station+currentStation<0){
+            station = mod((0-currentStation)*-1,6);
+            currentStation = 0;
 
         }
         else {
