@@ -5,5 +5,6 @@ public interface VendingState {
     //void chooseTheStation(int station); //in parameter is how many stations from the current station to the terminal station.
     void exchangeCash();
     void printTicket();
+    public void chooseTheStation(int station);
 
 }
